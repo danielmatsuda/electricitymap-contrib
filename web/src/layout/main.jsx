@@ -33,6 +33,7 @@ import useSWR from 'swr';
 import ErrorBoundary from '../components/errorboundary';
 import { GRID_DATA_FETCH_REQUESTED } from '../helpers/redux';
 import MobileLayerButtons from '../components/mobilelayerbuttons';
+import HistoricalViewIntroModal from '../components/historicalviewintromodal';
 
 const CLIENT_VERSION_CHECK_INTERVAL = 15 * 60 * 1000; // 15 minutes
 
@@ -191,6 +192,7 @@ const Main = ({ electricityMixMode, hasConnectionWarning }) => {
           {/* end #inner */}
         </div>
       </div>
+      <HistoricalViewIntroModal />
       <OnboardingModal />
       <InfoModal />
       <FAQModal />
